@@ -1,0 +1,47 @@
+<div class="form_header">
+
+</div>
+<div class="consent col-md-12">
+  <form [formGroup]="form"  role="form">
+    <img class="logo" src="assets/images/logo.png" />
+    <h1>Thank you for choosing Payroll Club.</h1>
+    <br>
+    <p>This credit application form will only take 5 to 10 minutes to complete.</p>
+    <br>
+    <div class="container">
+      <p>
+        <b>Initial application criteria</b>: to be eligble, please confirm that you:</p>
+      <br>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;• &nbsp;&nbsp;21 years but not more than 65 years old.
+        <span class="required">*</span>
+      </p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;• &nbsp;&nbsp;A Filipino Citizen or a foreigner who is a permanent resident for 2 years.
+        <span class="required">*</span>
+      </p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;• &nbsp;&nbsp;Can provide 2 Philippine Government issued for identification.</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;• &nbsp;&nbsp;Can provide email address and mobile number.</p>
+      <br/>
+      <p>
+        <p-checkbox formControlName="criteria" name="groupname" value="val1"></p-checkbox>Yes, I meet the above criteria.</p>
+      <br/>
+      <p>
+        <b>Getting started</b>
+      </p>
+      <br/>
+      <p>To get started, please confirm that you consent to a credit check, and have read and accept our
+        <a href="http://payrollclub.co/privacypolicy.pdf" target="_blank">privacy policy statement.</a>
+        <span class="required">*</span>
+      </p>
+      <br/>
+      <p>
+        <p-checkbox formControlName="agreement" name="groupname" value="val1"></p-checkbox>I agree to the credit check and accept the terms of Payroll Club's
+        <i>privacy and policy statement</i>
+      </p>
+      <br/>
+      <div class="form-actions text-right">
+        <button (click)="gotoApplicationForm()" type="button" class="btn btn-success" [disabled]="!form.valid">Continue <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </form>
+</div>
+

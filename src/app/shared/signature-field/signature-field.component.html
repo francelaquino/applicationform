@@ -1,0 +1,4 @@
+<div (window:resize)="onResize($event)">
+<signature-pad [options]="options" (onBeginEvent)="drawBegin()" (onEndEvent)="drawComplete()"></signature-pad>
+</div>
+<button type="button" class="btn btn-default btn-sm" (click)="clear()">Reset Signature</button>

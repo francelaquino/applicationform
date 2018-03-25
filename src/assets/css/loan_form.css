@@ -1,0 +1,50 @@
+.form_header{
+    background-color: #138f53;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.consent{
+    
+    text-align: center;
+    padding:10px;
+    
+}
+.consent h1,h2,p{
+    padding:0px;
+    margin: 5px;
+}
+.consent .logo{
+    width:250px;
+    clear:both;
+    float: none;
+}
+
+.consent h1{
+    font-size: 17px;
+}
+
+.consent h2{
+    font-size: 15px;
+}
+
+.consent .container{
+    font-size: 15px;
+    margin-top:20px;
+    text-align: left;
+    max-width:700px;
+    margin: auto;
+}
+
+.consent .required{
+    color:red;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+.requiredPad{
+    border:2px solid red !important;
+
+}

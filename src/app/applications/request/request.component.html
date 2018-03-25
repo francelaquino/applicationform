@@ -1,0 +1,302 @@
+<div class="form_header">
+
+</div>
+
+<div class="container ">
+  <div class="row " style="margin-top:20px;">
+    <div class="col-md-12">
+      <form [formGroup]="form" id="form1">
+        <div class="portlet  bordered ">
+
+          <div class="portlet-body form ">
+            <form [formGroup]="form" role="form">
+
+              <div class="row">
+
+
+                <div class="col-md-12">
+                  <div class="fancy-title title-bottom-border">
+                    <h5>Salary Loan Details </h5>
+                  </div>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="purpose">Purpose</label>
+                    <input type="text" class="form-control" id="purpose" maxlength="100" formControlName="purpose">
+                  </div>
+                <div class="form-group col-md-4">
+                  <label for="loanamount">Salary Loan Amount</label>
+                  <input type="number" class="form-control" id="loanamount" maxlength="100" formControlName="loanamount">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="terms">Term in Month/s</label>
+                  <input type="text" class="form-control" id="terms" maxlength="100" formControlName="terms">
+                </div>
+
+              </div>
+              <div class="row " *ngIf="paymentSchedule.length>0">
+                  <div class="col-md-4">
+    
+                  </div>
+                  <div class="col-md-4">
+                  </div>
+                  <div class="col-md-4">
+                    <div class="table-responsive table-striped" >
+                      <table class="table table-bordered ">
+                        <thead>
+                          <tr>
+                            <th>Payment Schedules</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let s of paymentSchedule">
+                            <td>{{s}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+    
+                </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="fancy-title title-bottom-border">
+                    <h5>Applicant Details</h5>
+                  </div>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="completename"> Complete Name</label>
+                  <input type="text" class="form-control" maxlength="100" id="completename" formControlName="completename">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="civilstatus"> Marital Status</label>
+                  <input type="text" class="form-control" maxlength="100" id="civilstatus" formControlName="civilstatus">
+                </div>
+
+                <div class="form-group col-md-4">
+                  <label for="birthdate">Birthdate</label>
+                  <input type="text" class="form-control" maxlength="100" id="birthdate" formControlName="birthdate">
+
+
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-md-4">
+                  <label for="mobileno">Mobile No.</label>
+                  <input type="text" class="form-control" maxlength="50" id="mobileno" formControlName="mobileno">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="emailaddress">Email Address</label>
+                  <input type="email" class="form-control" maxlength="50" id="emailaddress" formControlName="emailaddress">
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="form-group col-md-12">
+                  <label for="completeaddress">Complete Address</label>
+                  <input type="text" class="form-control" maxlength="300" id="completeaddress" formControlName="completeaddress">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="fancy-title title-bottom-border">
+                    <h5>Identifications</h5>
+                  </div>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="tinno">Tin No.</label>
+                  <input type="text" class="form-control" id="tinno" maxlength="50" formControlName="tinno">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="sssno">SSS No.</label>
+                  <input type="text" class="form-control" id="sssno" formControlName="sssno">
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="fancy-title title-bottom-border">
+                    <h5>Work / Finances</h5>
+                  </div>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="employername">Employer Name</label>
+                  <input type="text" class="form-control" id="employername" maxlength="100" formControlName="employername">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="workphone">Work Phone</label>
+                  <input type="text" class="form-control" id="workphone" maxlength="50" formControlName="workphone">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="jobtitle">Job Title</label>
+                  <input type="text" class="form-control" id="jobtitle" maxlength="50" formControlName="jobtitle">
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="form-group col-md-12">
+                  <label for="workaddress">Work Address</label>
+                  <input type="text" class="form-control" id="workaddress" maxlength="300" formControlName="workaddress">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <b class="underline">Duration at Current Work</b>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="workdurationyear">Year(s)</label>
+                  <input type="number" class="form-control" id="workdurationyear" formControlName="workdurationyear">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="workdurationmonth">Month(s)</label>
+                  <input type="number" class="form-control" id="workdurationmonth" formControlName="workdurationmonth">
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <b class="underline">Salary (before tax) Details</b>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="salaryphp">Php</label>
+                  <input type="number" class="form-control" id="salaryphp" formControlName="salaryphp">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="salaryper">Per Day / Week / Month</label>
+                  <input type="text" class="form-control" id="salaryper" maxlength="50" formControlName="salaryper">
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="fancy-title title-bottom-border">
+                    <h5>Family Members/Spouse's Details</h5>
+                  </div>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="famcompletename">Complete Name</label>
+                  <input type="text" class="form-control" id="famcompletename" maxlength="100" formControlName="famcompletename">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="fammobileno">Mobile No.</label>
+                  <input type="text" class="form-control" id="fammobileno" maxlength="50" formControlName="fammobileno">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="famemailaddress">Email Address</label>
+                  <input type="text" class="form-control" id="famemailaddress" maxlength="50" formControlName="famemailaddress">
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-md-12">
+                  <label for="famcompleteaddress">Complete Address</label>
+                  <input type="text" class="form-control" id="famcompleteaddress" maxlength="300" formControlName="famcompleteaddress">
+                </div>
+              </div>
+
+
+
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="fancy-title title-bottom-border">
+                    <h5>Co-Makers' Additional information
+                    </h5>
+                  </div>
+                </div>
+
+                <div class="form-group col-md-4">
+                  <label for="comakercompletename">Complete Name</label>
+                  <input type="text" class="form-control" id="comakercompletename" maxlength="100" formControlName="comakercompletename">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="comakermobileno">Mobile No.</label>
+                  <input type="text" class="form-control" id="comakermobileno" maxlength="50" formControlName="comakermobileno">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="comakeremailaddress">Email Address</label>
+                  <input type="text" class="form-control" id="comakeremailaddress" maxlength="50" formControlName="comakeremailaddress">
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="form-group col-md-4">
+                  <label for="comakeraddress">Relation to Application</label>
+                  <input type="text" class="form-control" id="comakerrelation" maxlength="50" formControlName="comakerrelation">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="comakertimeknown">Length of Time Applicant Known</label>
+                  <input type="text" class="form-control" id="comakertimeknown" maxlength="50" formControlName="comakertimeknown">
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="form-group col-md-12">
+                  <label for="comakeraddress">Comaker Permanent Address</label>
+                  <input type="text" class="form-control" id="comakeraddress" maxlength="300" formControlName="comakeraddress">
+                </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="fancy-title title-bottom-border">
+                        <h5>Documents
+                        </h5>
+                      </div>
+                    </div>
+                <div class="form-group col-md-3">
+                  <label>Government Issued ID</label>
+                  <br>
+                  <a href="http://api.payrollclub.co/index.php/nonmember/getApplicationDocument/{{requestDetail.government_file}}" target="_blank">Click Here</a>
+                </div>
+                <div class="form-group col-md-3">
+                  <label>Payslip</label>
+                  <br>
+                  <a href="http://api.payrollclub.co/index.php/nonmember/getApplicationDocument/{{requestDetail.payslip_file}}" target="_blank">Click Here</a>
+                </div>
+                <div class="form-group col-md-3">
+                  <label>Employment Certificate</label>
+                  <br>
+                  <a href="http://api.payrollclub.co/index.php/nonmember/getApplicationDocument/{{requestDetail.employment_file}}" target="_blank">Click Here</a>
+                </div>
+                <div class="form-group col-md-3">
+                    <label>Comaker Issued ID</label>
+                    <br>
+                    <a href="http://api.payrollclub.co/index.php/nonmember/getApplicationDocument/{{requestDetail.comaker_file}}" target="_blank">Click Here</a>
+                  </div>
+                <div class="form-group col-md-3">
+                  <label>Comaker E-Signature</label>
+                  <br>
+                  <a href="http://api.payrollclub.co/index.php/nonmember/getApplicationDocument/{{requestDetail.comaker_signature_file}}" target="_blank">Click Here</a>
+                </div>
+                <div class="form-group col-md-3">
+                    <label>Borrower E-Signature</label>
+                    <br>
+                    <a href="http://api.payrollclub.co/index.php/nonmember/getApplicationDocument/{{requestDetail.borrower_signature_file}}" target="_blank">Click Here</a>
+                  </div>
+              </div>
+              
+
+
+
+
+
+              <div class="fancy-title title-bottom-border">
+                <h5>&nbsp;</h5>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
+

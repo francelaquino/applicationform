@@ -1,0 +1,75 @@
+<div class="form_header">
+
+</div>
+<br>
+<br>
+<div class="col-md-6 "  style="margin:auto;text-align:left">
+  <img class="logo" src="assets/images/logo.png" />
+  <h2 style="margin:0px;">Thanks for stopping by.</h2>
+  <br>
+  <p style="margin:0px;">We are currently building our new website.</p>
+  <br>
+  <h5 >For more information  please complete the enquiry form below, send us an email or call +63 (0)906 307 6795</h5>
+  <h5>Send us and enquiry or request a statement:</h5>
+
+  <div class="row " style="margin-top:20px;">
+    <div class="col-md-6">
+
+          <form [formGroup]="form" (submit)="onSubmit()" role="form">
+
+
+
+              
+             
+            <div class="row">
+              <div class="form-group col-md-12" [ngClass]="hasError('type')">
+                <select class="form-control"  id="type" formControlName="type" placeholder="--Please select--">
+                  <option value="" selected="selected"></option>
+                  <option value="General Enquiry">General Enquiry</option>
+                  <option value="Request a statement">Request a statement</option>
+                  <option value="Complaints">Complaints</option>
+                </select>
+              </div>
+            </div>
+              <div class="row">
+              <div class="form-group col-md-6" [ngClass]="hasError('name')">
+                <label for="completename">Your Name</label>
+                <input type="text" class="form-control" maxlength="100" id="name" formControlName="name">
+              </div>
+              <div class="form-group col-md-6" [ngClass]="hasError('email')">
+                <label for="email">Your Email</label>
+                <input type="text" class="form-control" maxlength="100" id="email" formControlName="email">
+              </div>
+            </div>
+              <div class="row">
+              <div class="form-group col-md-12" [ngClass]="hasError('message')">
+                <label for="message">Your Message</label>
+                <textarea class="form-control" style="height:200px"  formControlName="message"></textarea>
+              </div>
+            </div>
+              <div class="row">
+              <div class="form-group col-md-12 text-right">
+              <button type="button" id="btnsubmit" class="btn btn-success btn-block">Send Enquiry
+              </button>
+            </div>
+          </div>
+
+          </form>
+
+    </div>
+    <div class="col-md-6">
+      <div class="rounded " style="background-color:#e9eaec;padding:10px">
+        <h4 style="margin:0px;color:#153578">Usefull downloads</h4>
+        <p><a href="#" style="color:black" target="_blank">Credit Application Form</a></p>
+        <p><a href="#" style="color:black" target="_blank">Payroll Club Rates and Fees</a></p>
+        <p><a href="http://payrollclub.co/privacypolicy.pdf" target="_blank" style="color:black">Privacy Policy</a></p>
+      </div>
+      <div style="text-align:center;margin-top:20px">
+      <a href="http://payrollclub.co/app/#/forms/consent"><img style="float:none;margin:auto" src="assets/images/applynow.png"></a>
+    </div>
+    </div>
+  </div>
+  
+
+
+</div>
