@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 export class CommonService {
 
   http: any;
-  baseUrl:string="http://api.payrollclub.co/index.php/";
+  baseUrl:string="http://localhost:8080/api.payrollclub/index.php";
   headers: Headers;
   options: RequestOptions;
   response: any;
